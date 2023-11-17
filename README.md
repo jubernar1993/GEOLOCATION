@@ -1,2 +1,2 @@
-# GEOLOCATION
-THIS IS A REAL LIFE WORK PROJECT (UTRAINS)
+# patients_geolocation
+Project to locate patients in order to facilitate their home appointments by medical specialists
