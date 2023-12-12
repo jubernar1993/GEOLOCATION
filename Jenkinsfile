@@ -6,7 +6,7 @@ stages {
 
 stage ("cleaning Stage") {
 	steps {
-		sh "mvn Clean"
+		sh "mvn clean"
 	}
 }
 
