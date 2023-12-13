@@ -27,12 +27,24 @@ stage ("packageing Stage") {
 
    }
 
-stage ("slack") {
+stage('slack-bot') {
+  steps {
+    sendSlack message: "this is the build results"
+  }
 
-	steps {
-		slackSend message: 'The job ran succesfully'
-	}
+  post {
+    aborted {
+      slackSend message: "This Build has failed"
+    }
+    failure {
+      slackSend message: "This Build has failed"
+    }
+    unsuccessful {
+      slackSend message: "This Build has failed"
+    }
+  }
 }
+
 
 
 
