@@ -29,7 +29,7 @@ stage ("packageing Stage") {
 
 stage('slack-bot') {
   steps {
-    slackSend message: 
+    slackSend message: "works"
   }
 
   post {
