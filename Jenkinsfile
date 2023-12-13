@@ -27,6 +27,16 @@ stage ("packageing Stage") {
 
    }
 
+stage ("slack") {
+
+	steps {
+		slackSend message: 'The job ran succesfully'
+	}
+}
+
+
+
+
      }
 
             }
