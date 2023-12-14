@@ -18,16 +18,6 @@ stage ("testing Stage") {
 	sh "mvn test"
  }
 
-
-post {
-        success {
-            slackSend message: "Build succeeded! :white_check_mark:"
-        }
-        
-        failure {
-            slackSend message: "Build failed! :x:"
-        }
-    }
 }
 
 
