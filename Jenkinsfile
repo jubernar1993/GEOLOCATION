@@ -1,46 +1,27 @@
 pipeline {
+	agent any
 
-agent any
+Stages {
 
-stages {
+	stage ("clean"){
+		steps{
+			sh "mvn cleal"
+		}
+	}
 
-stage ("cleaning Stage") {
+stage ("test"){
 	steps {
-		sh "mvn clean"
+		sh "mvn test"
 	}
 }
-	
 
 
-stage ("testing Stage") {
+stage ("package"){
 
- steps {
-	sh "mvn test"
- }
-
-}
-
-
-
-
-
-}
-
-
-stage ("packageing Stage") {
 	steps {
 		sh "mvn package"
+	}
+
 }
-
-   }
-
-<<<<<<< HEAD
-
-
-
-     }
-=======
-     }
-
-            }
->>>>>>> parent of 8518188 (added a new line to jenkins file. ***added slack messages configuration)
+ } 
+  }
