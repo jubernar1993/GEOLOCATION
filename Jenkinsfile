@@ -14,7 +14,7 @@ stage ("cleaning Stage") {
                 sh "mvn build"
             }
         }
-    }
+
     
     post {
         success {
@@ -24,6 +24,9 @@ stage ("cleaning Stage") {
         failure {
             slackSend(channel: '#general', message: "damn it bro! it failed :x:")
         }
+	}
+	
+
 
 stage ("testing Stage") {
 
