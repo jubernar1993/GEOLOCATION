@@ -34,7 +34,13 @@ stage ("packageing Stage") {
 
    }
 
+<<<<<<< HEAD
 
 
 
      }
+=======
+     }
+
+            }
+>>>>>>> parent of 8518188 (added a new line to jenkins file. ***added slack messages configuration)
