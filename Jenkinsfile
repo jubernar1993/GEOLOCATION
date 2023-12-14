@@ -21,11 +21,11 @@ stage ("testing Stage") {
 
 post {
         success {
-            slackSend(channel: '#general', message: "Build succeeded! :white_check_mark:")
+            slackSend message: "Build succeeded! :white_check_mark:"
         }
         
         failure {
-            slackSend(channel: '#general', message: "Build failed! :x:")
+            slackSend message: "Build failed! :x:"
         }
     }
 }
