@@ -54,5 +54,3 @@ stage ("slack-bot") {
 
 
      }
-
-            
