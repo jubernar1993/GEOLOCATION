@@ -44,12 +44,6 @@ stage ("packageing Stage") {
 
    }
 
-stage ("slack-bot") {
-	steps {
-		slackSend message: "The build has finished runnig hayaaaa"
-	}
-}
-
 
 
 
