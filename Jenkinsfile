@@ -1,6 +1,9 @@
 pipeline {
 	agent any
-
+tools { 
+      maven '/opt/maven' 
+      jdk '/usr/lib/jvm/java-17-amazon-corretto.x86_64' 
+    }
 stages {
 
 	stage ("clean"){
