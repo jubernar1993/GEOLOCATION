@@ -3,14 +3,25 @@ pipeline {
 stages {
 
 	stage ("clean"){
+
+       when {
+		branch 'main'
+	   }
+
+
 		steps{
-			sh "mvn clean"
+			sh "echo "this is the main branch" 
 		}
 	}
 
 stage ("test"){
 	steps {
-		sh "mvn test"
+
+when {
+	branch 'dev'
+}
+
+		sh "echo "this is the dev"
 	}
 }
 
@@ -18,7 +29,12 @@ stage ("test"){
 stage ("package"){
 
 	steps {
-		sh "mvn package"
+
+when {
+	branch 'feature-one'
+}
+
+		sh "echo "this is the feature-one" "
 	}
 
 }
