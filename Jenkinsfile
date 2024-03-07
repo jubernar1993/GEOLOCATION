@@ -27,7 +27,7 @@ pipeline {
 
         stage('slack') {
             steps {
-            slackSend color: 'danger' , message:    'XXXXSimulation a danger or something went wrong!!!XXXX'
+            slackSend color: 'good' , message:    'XXXXSimulation a danger or something went right!!!XXXX'
             }
         }
 
