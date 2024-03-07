@@ -22,7 +22,15 @@ pipeline {
 		}
 	 }
 
+stage ("Slack") {
 
+steps{
+
+SlackSend message: 'This is nothing but a test of the jenkins slack integration!'
+
+}
+
+}
 
 
 
