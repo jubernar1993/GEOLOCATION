@@ -24,7 +24,7 @@ pipeline {
 
 
 
-stages {
+
         stage('slack') {
             steps {
             slackSend message:    'This is nothing but a test'
