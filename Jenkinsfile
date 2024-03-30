@@ -27,7 +27,7 @@ pipeline {
  
  steps{
 
-	 slackSend color: 'good' , message: "This is a Jenkins Build Test. Please ignore!!!"
+	 slackSend color: 'bad' , message: "This is a Jenkins Build Test. Please ignore!!!"
  }
  
  
