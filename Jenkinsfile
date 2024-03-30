@@ -23,6 +23,19 @@ pipeline {
 	 }
 
 
+ stage ("Slack_Notification") {
+ 
+ step {
+
+	 slackSend color:good message: "This is a Jenkins Build Test. Please ignore!!!"
+ }
+ 
+ 
+ }
+
+
+
+		
 
 
 	}
