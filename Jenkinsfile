@@ -3,35 +3,28 @@ pipeline {
 
 	stages {
  
-     stage ("Clean") {
+     stage ("Maven Package") {
 		steps {
 			sh "mvn clean"
-		}
-	 }
-
-
-	 stage ("test") {
-		steps{
-			sh "mvn test"
-		}
-	 }
-
-	 stage ("package"){
-		steps{
+			sh "mvn install"
 			sh "mvn package"
 		}
 	 }
 
 
- stage ("Slack_Notification") {
- 
- steps{
+	 stage ("Maven test") {
+		steps{
+			sh "mvn test"
+		}
+	 }
 
-	 slackSend color: 'bad' , message: "This is a Jenkins Build Test. Please ignore!!!"
- }
- 
- 
- }
+	 stage ("Deploy"){
+		steps{
+			echo "Deploying"
+		}
+	 }
+
+
 
 
 
