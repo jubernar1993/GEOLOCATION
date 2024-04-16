@@ -28,7 +28,7 @@ pipeline {
 stage ("Slack_notification") {
 
 steps {
-	slackSend color: "good" message: "This is a test"
+	slackSend color: "good" , message: "This is a test"
 }
 
 }
