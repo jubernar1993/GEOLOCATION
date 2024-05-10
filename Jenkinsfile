@@ -12,7 +12,7 @@ pipeline {
 	 }
 
 
-	 stage ("Maven test") {
+	 stage ("Maven test stage") {
 		steps{
 			sh "mvn test"
 		}
