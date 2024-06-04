@@ -1,3 +1,5 @@
+#///This pipeline is to clean, install and package the geolocation application. Test it, Deploy, and send SLACK NOTIFICATION!
+
 pipeline {
 	agent any
 
